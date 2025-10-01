@@ -1,26 +1,26 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-// import image1 from '/public/image 1.png';
 import image2 from "/public/profile 2.jpg";
 import FloatingIcons from "../components/FloatingIcons";
 
 export default function Home() {
   return (
-    <section className="hero">
+    <section className="hero d-flex flex-column flex-lg-row align-items-center justify-content-between p-3 p-lg-5">
       <FloatingIcons />
-      <div className="hero-text">
+      {/* Text Section */}
+      <div className="hero-text text-center text-lg-start mb-4 mb-lg-0">
         <h1>
           Hello 👋, <br />
           I'm Chillabandla VannurSwamy
         </h1>
         <p>
-          <span style={{ fontSize: "2rem", fontWeight: "700" }}>
+          <span style={{ fontSize: "1.5rem", fontWeight: "700" }}>
             Passionate Frontend Developer
           </span>{" "}
           | Skilled in React.js | JavaScript & API Integrations
         </p>
-        <div className="hero-buttons">
+        <div className="hero-buttons d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-lg-start">
           <Button
             variant="light"
             className="btn-custom"
@@ -43,8 +43,15 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="hero-image">
-        <img src={image2} alt="Swamy" />
+
+      {/* Image Section */}
+      <div className="hero-image text-center">
+        <img
+          src={image2}
+          alt="Swamy"
+          className="img-fluid rounded"
+          style={{ maxWidth: "300px", width: "100%" }}
+        />
       </div>
     </section>
   );
